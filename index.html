@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gradient News Feed</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <nav class="navbar">
+      <div class="brand">
+        <div class="brand-icon">N</div>
+        <span>NewsPulse</span>
+      </div>
+      <div class="nav-pill">Gradient Theme Light Blue</div>
+    </nav>
+
+    <section class="hero">
+      <span class="hero-badge">Async News Dashboard</span>
+      <h1>Explore Latest Stories In A Premium News Feed.</h1>
+      <p>
+        A modern news project inspired by your selected gradient palette. It includes search,
+        category filter, async loading effect, animated cards and responsive design.
+      </p>
+    </section>
+
+    <section class="search-panel">
+      <input type="text" id="searchInput" placeholder="Search news title, category or source..." />
+      <select id="categorySelect">
+        <option value="all">All Categories</option>
+        <option value="technology">Technology</option>
+        <option value="education">Education</option>
+        <option value="business">Business</option>
+        <option value="sports">Sports</option>
+      </select>
+      <button onclick="fetchNews()">Fetch News</button>
+    </section>
+
+    <section class="category-tabs">
+      <button class="active" onclick="setCategory('all', this)">All</button>
+      <button onclick="setCategory('technology', this)">Technology</button>
+      <button onclick="setCategory('education', this)">Education</button>
+      <button onclick="setCategory('business', this)">Business</button>
+      <button onclick="setCategory('sports', this)">Sports</button>
+    </section>
+
+    <main class="news-grid" id="newsGrid"></main>
+  </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
